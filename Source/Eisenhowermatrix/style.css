@@ -1,0 +1,914 @@
+*,
+        *:after,
+        *:before {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        text-decoration: none;
+        }
+        :root {
+        --yellow: #e6aced;
+        --green: #3b2469;
+        --red: #e6aced;
+        --blue: #8b0fe3;
+        --dark-blue:rgb(221, 190, 253);
+        --purple: #474d84;
+        --purple-secondary: #333867;
+        --title-primary-color: rgb(255, 255, 255);
+        --title-secondary-color:black;
+        --first-color: hsl(228, 81%, 49%);
+        --title-color: hsl(228, 12%, 15%);
+        --text-color: hsl(228, 8%, 50%);
+        --body-color: hsl(228, 100%, 99%);
+        --container-color: #fff;
+        }
+        body{
+          margin: 0px;
+          padding: 0px;
+        
+        }
+        .header{
+          background-color:rgb(211, 153, 248) ;
+          color: white;
+          padding-left: 4px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: fixed;
+          top: 0px;
+          right: 0px;
+          left: 0px;
+          z-index: 100; /* Set a higher z-index to ensure it stays above the content */
+        
+        }
+        .left{
+          height: 40px;
+          width: 20px;
+        }
+        .logoimage {
+          height: 55px;
+          width: 78px;
+          margin-top: -7px;
+      }
+        .sub-menu-wrap{
+          position:fixed;
+          right:55px;
+          top: 57px;
+          transition: max-height 0.5s;
+          width: 320px;
+          max-height: 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          overflow: hidden;
+          z-index: 200;
+        }
+        .sub-menu-wrap.open-menu{
+          max-height: 400px;
+          z-index: 200;
+
+        }
+        .sub-menu{
+          background: #fff;
+          padding: 20px;
+          z-index: 200;
+          
+        }
+        .user-info{
+          display: flex;
+          align-items: center;
+          z-index: 200;
+
+        }
+        .user-info h3{
+          font-weight: 500;
+          z-index: 200;
+
+        }
+        .user-info img{
+          width: 60px;
+          border-radius: 50%;
+          margin-right: 15px;
+          z-index: 200;
+
+        }
+        .sub-menu hr{
+          border: 0;
+          height: 1px;
+          width: 100%;
+          background: #ccc;
+          margin: 15px 0 10px;
+          z-index: 200;
+         
+        
+        }
+        .sub-menu-link{
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #525252;
+          margin: 12px 0;
+          z-index: 200;
+
+        }
+        .sub-menu-link p{
+          width: 100%;
+          z-index: 200;
+
+        
+        }
+        .sub-menu-link i{
+          width: 40px;
+          background: #e5e5e5;
+          border-radius: 50%;
+          padding: 8px;
+          margin-right: 15px;
+          z-index: 200;
+
+        }
+        .sub-menu-link span{
+          font-size: 22px;
+          transition: transform 0.5s;
+          z-index: 200;
+
+        }
+        .sub-menu-link:hover span{
+          transform: translateX(5px);
+          z-index: 200;
+
+        }
+        .sub-menu-link:hover p{
+          font-weight: 600;
+          z-index: 200;
+
+        }
+        .sideber{
+          background-color: black;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          top: 57px;
+          z-index: 200;
+
+        
+          
+        }
+        /*=============== GOOGLE FONTS ===============*/
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+        
+        /*=============== VARIABLES CSS ===============*/
+        :root {
+          /*========== Colors ==========*/
+          /*Color mode HSL(hue, saturation, lightness)*/
+          --first-color: hsl(228, 81%, 49%);
+          --title-color: hsl(228, 12%, 15%);
+          --text-color: hsl(228, 8%, 50%);
+          --body-color: hsl(228, 100%, 99%);
+          --container-color: #fff;
+        
+          /*========== Font and typography ==========*/
+          /*.5rem = 8px | 1rem = 16px ...*/
+          --body-font: 'Poppins', sans-serif;
+          --normal-font-size: .938rem;
+        }
+        
+        /* Responsive typography */
+        @media screen and (min-width: 968px) {
+          :root {
+            --normal-font-size: 1rem;
+          }
+        }
+        
+        /*=============== BASE ===============*/
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+        }
+        
+        
+        /*=============== NAV ===============*/
+        
+        .logoimage{
+          size: 400px;
+        }
+        @media screen and (max-width: 767px) {
+          .nav__logo, 
+          .nav__toggle, 
+          .nav__name {
+            display: none;
+          }
+        
+          .nav__list {
+            position: fixed;
+            bottom: 2rem;
+            background-color: var(--container-color);
+            box-shadow: 0 8px 24px hsla(228, 81%, 24%, .15);
+            width: 90%;
+            padding: 30px 40px;
+            border-radius: 1rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 36px;
+            transition: .4s;
+            z-index: 200;
+
+      
+          }
+        }
+        
+        .nav__link {
+          display: flex;
+          color: var(--text-color);
+          font-weight: 500;
+          transition: .3s;
+          z-index: 200;
+
+        }
+        
+        .nav__link i {
+          font-size: 1.25rem;
+          z-index: 200;
+
+        }
+        
+        .nav__link:hover {
+          color: var(--first-color);
+          z-index: 200;
+
+        }
+        
+        /* Active link */
+        .active-link {
+          color: var(--first-color);
+          z-index: 200;
+
+        }
+
+        
+        /*=============== BREAKPOINTS ===============*/
+        /* For small devices */
+        @media screen and (max-width: 200px) {
+          .nav__list {
+            column-gap: 20px;
+          }
+        }
+        
+        /* For medium devices */
+        @media screen and (min-width: 300px) {
+          .nav__list {
+            width: 332px;
+            z-index: 200;
+
+          }
+        }
+        
+        @media screen and (min-width: 767px) {
+          .container {
+            margin-left: 7rem;
+            margin-right: 1.5rem;
+            z-index: 200;
+
+          }
+          .nav {
+            position: fixed;
+            left: 0;
+            background-color: var(--container-color);
+            box-shadow: 1px 0 4px hsla(228, 81%, 49%, .15);
+            width: 84px;
+            height: 100vh;
+            padding: 2rem;
+            transition: .3s;
+            z-index: 200;
+
+          }
+            
+        /* Show menu */
+        .show-menu {
+          width: 255px;
+        }
+        
+        /* Rotate toggle icon */
+        .rotate-icon {
+          transform: rotate(180deg);
+        }
+        
+          .nav__logo {
+            display: flex;
+            z-index: 200;
+
+          }
+          .nav__logo i {
+            font-size: 1.25rem;
+            color: var(--first-color);
+            z-index: 200;
+
+          }
+          .nav__logo-name {
+            color: var(--title-color);
+            font-weight: 600;
+            z-index: 200;
+
+          }
+          .nav__logo, .nav__link {
+            align-items: center;
+            column-gap: 1rem;
+            z-index: 200;
+
+          }
+          .nav__list {
+            display: grid;
+            row-gap: 2.5rem;
+            margin-top: 10.5rem;
+            z-index: 200;
+
+          }
+          .nav__content {
+            overflow: hidden;
+            height: 100%;
+            z-index: 200;
+
+          }
+          .nav__toggle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--title-color);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.20rem;
+            display: grid;
+            place-items: center;
+            top: 2rem;
+            right: -10px;
+            cursor: pointer;
+            transition: .4s;
+            z-index: 200;
+
+          }
+        }
+      
+        /* For 2K & 4K resolutions */
+        @media screen and (min-width: 2048px) {
+          body {
+            zoom: 1.7;
+          }
+        }
+        
+        @media screen and (min-width: 3840px) {
+          body {
+            zoom: 2.5;
+          }
+        }
+        
+        .hamburger-menu {
+          height: 24px;
+          margin-left: 10px;
+          margin-right: 24PX;
+          margin-top: 4px;
+        }
+        .logo {
+          height: 33px;
+          margin-left: 20px;
+          margin-right: 20PX;
+          
+        }
+        .right {
+          width: 180px;
+          margin-right: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-shrink: 0;
+        }
+        .apps {
+          height: 20px;
+        }
+        .search {
+          height: 20px;
+          margin-right: 0px;
+          
+        }
+        .streaks_count {
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+          position: relative; /* Adding relative positioning for the tooltip */
+      }
+  
+     
+  
+      /* Style for the tooltip */
+      .tooltip {
+        position: absolute;
+        margin: 20px;
+        left: -10%;
+        transform: translateX(-50%);
+        background-color: #333; /* Dark gray background */
+        color: rgb(211, 203, 243);
+        padding: 10px 10px; /* Add more padding for a spacious feel */
+        font-size: 20px; /* Larger font size */
+        border-radius: 8px; /* Rounded corners */
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+      }
+      
+    /* Triangle for the tooltip arrow */
+    .tooltip::before {
+        content: "";
+        position: absolute;
+       
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px 5px 0;
+        border-style: solid;
+        border-color: #333 transparent transparent;
+    }
+      /* Show the tooltip on hover */
+      .streaks_count:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+      }
+      .streaks{
+        height: 20px;
+      }
+      
+        
+        .noti {
+          height: 20px;
+          
+        }
+        .userpp {
+          height: 32px;
+          border-radius: 16px;
+          cursor: pointer;
+        }
+        .middle {
+          display: block;
+          margin-left: 50px;
+          
+          
+        }
+        
+
+body{
+  align-items: center;
+}
+
+body .dark{
+    background-color: #272629;
+align-items: center;
+  }
+  
+  /* Styles for light mode (default) */
+  body .light{
+    background-color: rgb(185, 171, 249);
+    align-items: center;
+  }
+     
+        .matrix-container {
+           top: -100;
+            background-color: #d9dfdf00;
+            display: grid;
+          
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            padding: 20px;
+            width: 800px;
+            border-radius: 10px;
+            align-items: center;
+            gap: 20px;
+            margin: auto;
+            margin-top: -200px;
+            margin-left: 100px;
+          
+         
+          
+        }
+        
+        .quadrant {
+            background-color: #FFFFFF;
+            border-radius: 50px;
+      
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+          
+            display: flex;
+            align-items: center;
+            overflow-y: auto; /* Add vertical scroll when the content overflows */
+            min-height: 250px;
+            max-height:250px; /* Adjust the max-height to limit the matrix height */
+            width: 450px;
+        
+          
+            
+        }
+        
+        
+        .quadrant h3 {
+            margin: -15px;
+        }
+        
+        .task {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .task-input{
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        .task-checkbox {
+            margin-right: 10px;  
+          
+        }
+        
+        .refresh-button {
+            position: absolute;
+            top: 2px;
+            right: 20px;
+            padding: 2px 5px;
+            cursor: pointer;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .add-task-btn {
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            background-color: #f7f8f8;
+            border-color: 5px solid #000000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .add-task-btn::before {
+            content: '+';
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .add-task-btn:hover {
+            background-color: #e1e1e1;
+        }
+        
+        .delete-button{
+            margin-left: 100px;
+            margin-top: -18px;
+            height: 10px;
+            width: 10px;
+           align-items: center;
+           background-color: #fbcece00;
+           size: 5px;
+
+            
+            
+        }
+        .delete-button:hover {
+            background-color: #f5a5a5a7;
+        }
+        
+
+  
+  
+        
+        /* Add hover effect and transition for #important-urgent */
+        #important-urgent {
+            background-color: #abeebf;
+            transition: background-color 1.5s,transform 0.5s;
+            z-index: 20;
+        }
+        
+        #important-urgent:hover {
+            background-color:rgb(211, 153, 248);
+            transform: scale(1.06);
+            z-index: 20;
+        }
+        
+        
+        #important-not-urgent {
+            background-color: #abcdf1;  
+            transition: background-color 1s, transform 0.5s;
+            z-index: 20;
+        }
+        #important-not-urgent:hover {
+            background-color: rgb(211, 153, 248);
+            transform: scale(1.06);
+            z-index: 20;
+        }
+        
+        #not-important-urgent {
+            background-color: #fce88e; 
+            transition: background-color 1s, transform 0.5s;
+            z-index: 20;
+        }
+        #not-important-urgent:hover {
+            background-color: rgb(211, 153, 248);
+            transform: scale(1.06);
+            z-index: 20;
+        }
+        
+        #not-important-not-urgent {
+            background-color: #fbb8f2; 
+            transition: background-color 1.5s,transform 0.5s;
+            z-index: 20;
+        }
+        #not-important-not-urgent:hover {
+            background-color: rgb(211, 153, 248);;
+            transform: scale(1.06);
+            z-index: 20;
+        }
+        h3  {
+           font-size: 15px; 
+            font-weight: extra-bold;
+            /* Set a base color for the text */
+           
+            
+            text-align: center;
+            /* text-transform: uppercase; */
+            /* letter-spacing: 1px; */
+            
+           
+            
+            
+            font-family: Arial, sans-serif;
+            /* Apply gradient background to the text */
+            background: linear-gradient(135deg, #010000, #1d2732);
+            /* Clip the background to the text */
+            -webkit-background-clip: text;
+            background-clip: text;
+            /* Set transparent text color to reveal the gradient background */
+            color: transparent;
+            /* Apply the same gradient animation as before */
+            
+            animation: gradientAnimation 2s infinite;
+            border-bottom: 1px solid #000000;
+          }
+          
+          @keyframes gradientAnimation {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+          
+          
+        @keyframes partyEffect {
+            0%, 100% {
+                transform: translateY(0);
+                background-color: #7cf09f;
+            }
+            25% {
+                transform: translateY(-5px);
+                background-color: #f094c2;
+            }
+            50% {
+                transform: translateY(-10px);
+                background-color: #f8e71c;
+            }
+            75% {
+                transform: translateY(-5px);
+                background-color: #5dc4e0;
+            }
+        }
+        
+        .task-checkbox:checked + label {
+            animation: partyEffect 0.6s ease-in-out;
+           
+            /* Add your styles for the crossed out text when checkbox is checked */
+            text-decoration: line-through;
+            }
+
+          
+        .task-checkbox {
+  /* Increase the size of the checkbox */
+  width: 18px;
+  height: 18px;
+  position: relative; 
+
+ 
+
+  outline: none;
+  border: 1px solid black;
+  
+ 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Add hover effect */
+.task-checkbox:hover {
+  border-color: #da51b3;
+}
+
+
+
+        /* Media queries for responsiveness */
+        
+        @media (max-width: 770px) and (min-width: 330px) {
+          body {
+              display: flex; /* Add this line to enable flex layout */
+              align-items: center;
+              overflow-x: auto; /* Enable horizontal scrolling when needed */
+          }
+      
+          .matrix-container {
+              display: grid; /* Add this line to enable grid layout */
+              grid-template-columns: 1fr;
+              grid-template-rows: repeat(4, 1fr);
+              /* height: auto; */
+              max-width: 200vw;
+              min-height: 200px;
+              padding: 70px;
+              margin: -120px; /* Remove this line (redundant with margin-top) */
+              margin-right: 20px; /* Remove this line (redundant with margin) */
+              align-items: center;
+              font-size: 7vw;
+              margin-top: 320px;
+          }
+      
+          .quadrant {
+              padding-top: 20px;
+              padding-left: 20px;
+              padding-right: 20px;
+              font-size: 4vw;
+          }
+      
+          .quadrant h3 {
+              margin: 0;
+          }
+      
+          .add-task-btn {
+              margin-left: 5px;
+          }
+      
+          h3 {
+              display: flex;
+          }
+      }
+      
+
+      @media (max-width: 330px) {
+        body {
+            display: flex; /* Add this line to enable flex layout */
+            align-items: center;
+            overflow-x: auto; /* Enable horizontal scrolling when needed */
+        }
+    
+        .matrix-container {
+            display: grid; /* Add this line to enable grid layout */
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            /* height: auto; */
+            margin-top: 100px;
+            max-width: 150vw;
+            min-height: 200px;
+            padding: 0px;
+            padding-right: 50px;
+            align-items: center;
+            font-size: 7vw;
+            margin-left: -100px;
+        
+        }
+    
+        .quadrant {
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 4vw;
+        }
+    
+        .quadrant h3 {
+            margin: 0;
+        }
+    
+        .add-task-btn {
+            margin-left: 5px;
+        }
+    
+        h3 {
+            display: flex;
+        }
+    }
+    
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+
+}
+
+/* Toggle button styles */
+.spacebt {
+  cursor: pointer;
+}
+
+/* .radio-btn {
+  width: 40px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: #3a393c;
+  position: relative;
+}
+
+.radio-inner {
+  width: 15px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f1f4f9;
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Add a class for dark mode */
+/* .spacebt.dark-mode .radio-inner {
+  transform: translateX(25px);
+  background-color: #333;
+  
+} */
+
+/* .dark-mode .spacebt .radio-inner { */
+  /* Add your dark mode styles for the toggle button here */
+  /* For example, you can change the background color or any other styles */
+  /* background-color: #27232a;
+  border: 1px solid rgb(255, 251, 251);
+} */
+/* .dark-mode .radio-btn {
+  
+  background-color: #e8dfdf;
+  
+}  */
+
+
+.radio-btn {
+  width: 20px;
+  height: 6px;
+  padding: 9px;
+  padding-top: 6px;
+  padding-left: 6px;
+  background-color: #27173a;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.radio-btn .radio-inner {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #8154b8;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 100%;
+  height: 100%;
+  background-color: #27173a;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner.active {
+  transform: translateX(calc(150px - 137px));
+}
+
+.radio-btn .radio-inner.active::before {
+  left: -25px;
+  transform: scale(1);
+}
+

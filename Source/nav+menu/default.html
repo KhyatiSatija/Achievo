@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Link da fonte está na descrição -->
+        <!-- Font Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet">
+        <style>
+            
+        </style>
+
+    </head>
+    <body style="height: 800px;
+    padding-left: 90px;">
+
+        <div class="header">
+            <div class="left">
+                <img class="logoimage" src="../Eisenhowermatrix/icons/logo.png">
+            </div>
+            <div class="middle">
+                <img class="logo" 
+                src="achievo.png">
+            </div>
+            <div class="right">
+                <div class="spacebt">
+                    <div class="radio-btn">
+                        <div class="radio-inner"></div>
+                      
+                    </div>
+                </div>
+                
+                <img class="search" src="icons/search.svg">
+                <img class="noti" src="icons/notifications.svg">
+                
+                <img class="apps" src="icons/youtube-apps.svg">
+                
+                <img src = "icons/userpp.jpeg" class = "userpp" onclick="toggleMenu()">
+            </div>
+            
+        
+        
+        </div>
+
+        <div class="sub-menu-wrap" id = "subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="icons/userpp.jpeg" >
+                    <h3>Khyati Satija</h3>
+                </div>
+                <hr/>
+                <a href = "#" class = "sub-menu-link">
+                    <i class='bx bx-user'></i>
+                    <p>My Profile</p> <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-star'></i>
+                    <p>About Us</p> <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-question-mark'></i>
+                    <p>Support</p> <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-log-out'></i>
+                    <p>Log out</p> <span>></span>
+                </a>
+
+                
+
+            </div>
+        </div>
+
+        <!-- adding new file for sidebar -->
+        <div class="nav" id="nav">
+            <nav class="nav__content">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-chevron-right' ></i>
+                </div>
+    
+                <a href="#" class="nav__logo">
+                    <i class='bx bx-menu' ></i>
+                    <span class="nav__logo-name">Features</span>
+                </a>
+    
+                <div class="nav__list">
+                    
+                    <a href="../Default_page/achievo.html" class="nav__link">
+                        <i class='bx bx-alarm' ></i>
+                            <span class="nav__name">Pomodoro-ToDo</span>
+                    </a>
+                    
+                    <a href="../Eisenhowermatrix/index.html" class="nav__link active-link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="nav__name">Eisenhower Matrix</span>
+                    </a>
+
+                    <a href="../Wheel/index.html" class="nav__link">
+                        <i class='bx bx-webcam'></i>
+                        <span class="nav__name">Motivational wheel</span>
+                    </a>
+    
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-file' ></i>
+                        <span class="nav__name">Analyse your day</span>
+                    </a>
+    
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-bar-chart-square' ></i>
+                        <span class="nav__name">Leaderboard</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-flag'></i>
+                        <span class="nav__name">Milestone Setter</span>
+                    </a>
+
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div style="
+        height: 200px;
+        width: 200px;
+        position: static;
+        margin-top: 60px;
+        ">
+       
+
+        </div>
+        
+        <script>
+            let subMenu = document.getElementById("subMenu");
+        
+            function toggleMenu(){
+                subMenu.classList.toggle("open-menu");
+            }
+        </script>
+        
+
+        
+        <script src="main.js"></script>
+        
+
+
+        
+    </body>
+</html>
