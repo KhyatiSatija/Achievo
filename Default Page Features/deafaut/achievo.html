@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Font Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
+    
+        <link rel="stylesheet" href="style.css">
+        <style>
+            
+        </style>
+
+    </head>
+    <body style="height: 800px;
+    padding-left: 90px;">
+    <div>
+        
+    </div>
+        <div class="header">
+            <div class="left">
+                <img class="hamburger-menu"
+                src="icons/hamburger-menu.svg">
+                
+            </div>
+            <div class="middle">
+                <img class="logo" 
+                src="achievo.png">
+            </div>
+            <div class="right">
+                <img class="search" src="icons/search.svg">
+                <img class="noti" src="icons/notifications.svg">
+                
+                <img class="apps" src="icons/youtube-apps.svg">
+                
+                <img class="userpp" src="icons/userpp.jpeg">
+            </div>
+        
+        
+        </div>
+        <div class="sideber">siderbar11</div>
+        <div style="
+        height: 200px;
+        width: 200px;
+        position: static;
+        margin-top: 60px;
+        ">
+        <div class="grid">
+            <div class="container">
+
+                <div class="card">
+        
+                    <div class="card-header">
+                        <h1>POMODORO</h1>
+                        <div class="card-header-buttons">
+        
+                            <button id="buttonTypePomodoro"
+                                    class="active" 
+                                    onclick="setPomodoroType(TIMER_TYPE_POMODORO);">
+                                    Pomodoro
+                            </button>
+        
+                            <button id="buttonTypeShortBreak"
+                                    onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">
+                                Short Break
+                            </button>
+        
+                        </div>
+                    </div>
+        
+                    <div class="card-body">
+        
+                        <div id="circularProgressBar" class="progress-bar">
+                            <div class="progress-bar-inner">
+                                <h2 class="progress-value">25:00</h2>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="card-footer">
+        
+                        <button class="btn-sucess" onclick="startTimer();">Start</button>
+                        <button class="btn-danger" onclick="stopTimer();">Stop</button>
+                        <button onclick="resetTimer();">Reset</button>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+            <div class="container1">
+                <div class="appto">
+                    <h2>To-do List</h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add a new task">
+                        <button onclick="addTask()">+</button>
+                    </div>
+                    <ul id="listto">
+                    <!-- <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+                    </ul>
+
+                </div>
+        
+            </div>
+
+        </div>
+
+        
+
+        
+        <script src="main.js"></script>
+
+
+        
+    </body>
+</html>

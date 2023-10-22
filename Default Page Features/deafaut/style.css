@@ -1,0 +1,358 @@
+*,
+*:after,
+*:before {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+text-decoration: none;
+}
+:root {
+--yellow: #e6aced;
+--green: #3b2469;
+--red: #e6aced;
+--blue: #8b0fe3;
+--dark-blue:rgb(221, 190, 253);
+--purple: #474d84;
+--purple-secondary: #333867;
+--title-primary-color: rgb(255, 255, 255);
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.header{
+  background-color:rgb(211, 153, 248) ;
+  color: white;
+  padding-left: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.sideber{
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 56px;
+  
+}
+.hamburger-menu {
+  height: 24px;
+  margin-left: 10px;
+  margin-right: 24PX;
+  margin-top: 4px;
+}
+.logo {
+  height: 33px;
+  margin-left: 20px;
+  margin-right: 20PX;
+  
+}
+.right {
+  width: 180px;
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.apps {
+  height: 20px;
+}
+.search {
+  height: 20px;
+  margin-right: 0px;
+  
+}
+
+.noti {
+  height: 20px;
+  
+}
+.userpp {
+  height: 32px;
+  border-radius: 16px;
+}
+.middle {
+  display: block;
+  margin-left: 50px;
+  
+  
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--dark-blue);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  max-height: 370px;
+  
+  
+}
+.card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.card-header h1 {
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--title-primary-color);
+}
+.card-header-buttons {
+  display: flex;
+  justify-content: stretch;
+  gap: 10px;
+  padding: 4px;
+}
+.card-header-buttons button {
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  background-color: var(--purple);
+  color: var(--title-primary-color);
+}
+.card-header-buttons .active {
+  background-color: var(--red);
+}
+
+/* card body */
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.progress-bar {
+  height: 180px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(var(--blue) 360deg, var(--purple) 0deg);
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+  transition: all ease;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.progress-bar-inner {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-blue);
+  border-radius: 50%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.progress-bar-inner h2 {
+  color: var(--title-primary-color);
+  font-weight: 900;
+  font-size: 40px;
+}
+/* card footer */
+.card-footer {
+  display: flex;
+  justify-content: stretch;
+  gap: 20px;
+  padding: 10px;
+}
+.card-footer button {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: var(--yellow);
+  color: var(--title-primary-color);
+  font-weight: 900;
+  font-size: 14px;
+}
+.card-footer .btn-sucess {
+  background-color: var(--green);
+}
+.card-footer .btn-danger {
+  background-color: var(--red);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgb(124, 72, 156);
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+  }
+  100% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+.appto {
+  display: inline-block;
+  padding-right: 200px;
+  padding-top: 15px;
+  padding-left: 15px;
+  border-radius: 20px;
+  background: rgb(253, 251, 251);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 300px;
+}
+.appto h2 {
+  font-weight: 700;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 80px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  width: 400px;
+}
+input{
+  flex: 1;
+  border: none;
+  outline:none;
+  background: transparent;
+  padding: 7px;
+  font-weight: 14px;
+}
+button{
+  border: none;
+  outline: none;
+  background: rgb(167, 121, 196);
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  
+  
+}
+ul li{
+  list-style: none;
+  padding-left:31px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 14px;
+  background-image: url(icons/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: -5px;
+  left: -1px;
+  
+
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+
+}
+ul li.checked::before{
+  background-image: url(icons/checked.png);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: -4px;
+  height: 20px;
+  width: 22px;
+  padding-top: 6px;
+  
+  font-size: 22px;
+  border-radius: 10px;
+  color: #555;
+  line-height: 16px;
+  text-align: center;
+  
+}
+ul li span:hover{
+  background: #e6aced;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 700px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container1 {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .row {
+    width: 100%;
+  }
+  .appto {
+    margin-top: 20px;
+    padding-right: 75px;
+    
+  }
+  .sideber {
+    display: none;
+  }
+}

@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: azure;
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 230vh;
+    overflow: scroll;
+    margin: 0;
+
+}
+.container{
+    width: 100%;
+    /*background-color: darkviolet;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.rating_box{
+    position: relative;
+    background-color:#fff ;
+    height: 100px;
+    /* display: flex; */
+    display:inline-block;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.one{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: darkviolet;
+}
+.star-rating {
+    display: inline-block;
+  }
+  
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .star-rating label {
+    float: right;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .star-rating label:before {
+    content: '\2605';
+    padding-right: 5px;
+  }
+  
+  .star-rating input[type="radio"]:checked ~ label {
+    color: gold;
+  }
+  .button{
+    background-color:rgb(199, 209, 199);
+    margin-bottom: 15px;
+    width:80px;
+    align-items:center; 
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+  }

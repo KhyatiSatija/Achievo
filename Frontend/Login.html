@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Sign in</title>
+        <h1>Achievo</h1>
+        <style>
+            button {
+                text-align: center;
+                color: white;
+                background-color: blue;
+                border-radius: 7px;
+                width: 50%;
+            }
+            input {
+                width: 50%;
+            }
+            .Sign in {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form style="margin: auto; float: right; width: 60%;"  onsubmit="return false;">
+            <div class="Sign in">
+                <h3><strong>Sign in</strong></h3>
+            </div><br>
+            <div class="_input">
+                <input type="text" id="email" name="email" placeholder="Email"><br><br>
+                <input type="text" id="pwd" name="pwd" placeholder="Password"><br><br>
+            </div>
+            <div class="_button">
+                <button onclick="fun()">Sign in</button><br><br>
+            </div>
+            <div class="text">
+                <p style="text-align: left;"><a href="Reset_pwd.html" target="_blank">Forgot your password?</a></p>
+                <p style="text-align: left;"><a href="index.html" target="_blank">New User? Sign Up</a></p>
+            </div>
+            
+        </form>
+    
+    <script>
+        
+        function fun() {
+            const a=document.getElementById("email");
+            const b=document.getElementById("pwd");
+            console.log(a.value);
+            console.log(b.value);
+            if (a.value=="user" && b.value=="pwd") { 
+                alert("Login Succesful");
+                location.assign("welcome.html");
+            } 
+            else {
+                
+                a.value="";
+                b.value="";
+                b.style.borderColor="red";
+                b.placeholder="Invalid Password";
+
+            }
+        }
+
+    </script>
+    </body>
+</html>
