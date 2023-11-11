@@ -1,0 +1,3 @@
+frontend - HTML, CSS, Javascript
+backend - node.js, express.js 
+database - mySQL
