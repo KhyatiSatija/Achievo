@@ -4,26 +4,36 @@ Achievo - Your Path to Success
 Introduction
 ------------
 
-Hello everyone, I am Anushka Shankar, and together with my talented teammates, we proudly present Achievo. In today's fast-paced and demanding world, maintaining focus, staying organized, and remaining motivated can prove to be quite challenging. We all have ambitious goals and important tasks to accomplish, but the constant battle with procrastination often hinders our progress and causes us to overlook crucial responsibilities.
+Hello everyone, together with my talented teammates, we proudly present Achievo.
+In today's fast-paced and demanding world, maintaining focus, staying organized, and remaining motivated can prove to be quite challenging. 
+We all have ambitious goals and important tasks to accomplish, but the constant battle with procrastination often hinders our progress and
+causes us to overlook crucial responsibilities.
 
-Achievo is a user-centric web application meticulously crafted to propel you towards success by enhancing your focus, motivation, and productivity. With an array of powerful features and a thoughtful design, Achievo aims to empower you in achieving your dreams and making progress in all aspects of life.
+Achievo is a user-centric web application meticulously crafted to propel you towards success by enhancing your focus, motivation, and productivity.
+With an array of powerful features and a thoughtful design, Achievo aims to empower you in achieving your dreams and making progress in all
+aspects of life.
 
 Objective
 ---------
 
-The primary objective of Achievo is to provide users with a set of valuable tools and features that foster productivity, time management, and personal growth. Our application offers the following key components:
+The primary objective of Achievo is to provide users with a set of valuable tools and features that foster productivity, time management,
+and personal growth. Our application offers the following key components:
 
 1. Pomodoro and Todo Feature
-   Achievo incorporates the popular Pomodoro Technique to help you manage your time effectively and maintain focus during work sessions. You can create and organize your to-do lists, ensuring that important tasks are prioritized and completed efficiently.
+   Achievo incorporates the popular Pomodoro Technique to help you manage your time effectively and maintain focus during work sessions. 
+   You can create and organize your to-do lists, ensuring that important tasks are prioritized and completed efficiently.
 
 2. Login Page and Feedback Form
-   To provide a personalized experience, Achievo offers user authentication through a secure login page. We value your feedback, and with the integrated feedback form, you can share your thoughts, suggestions, and experiences to help us improve the application further.
+   To provide a personalized experience, Achievo offers user authentication through a secure login page. We value your feedback,
+and with the integrated feedback form, you can share your thoughts, suggestions, and experiences to help us improve the application further.
 
 3. Navigation and Menu
-   Our application boasts an intuitive navigation and menu system, making it effortless to access different features and functionalities seamlessly. The user-friendly interface ensures a smooth and pleasant experience throughout your interaction with Achievo.
+   Our application boasts an intuitive navigation and menu system, making it effortless to access different features and functionalities 
+   seamlessly. The user-friendly interface ensures a smooth and pleasant experience throughout your interaction with Achievo.
 
 4. Feature Pages: Eisenhower Matrix, Hour Rule, and Motivational Wheel
-   Achievo goes beyond the basic productivity tools and offers dedicated feature pages for advanced techniques such as the Eisenhower Matrix, Hour Rule, and Motivational Wheel. These strategies are designed to empower you with valuable insights and techniques for personal development and goal achievement.
+   Achievo goes beyond the basic productivity tools and offers dedicated feature pages for advanced techniques such as 
+   the Eisenhower Matrix, Hour Rule, and Motivational Wheel. These strategies are designed to empower you with valuable insights and techniques for personal development and goal achievement.
 
 5. Eisenhower Matrix
 -----------------
@@ -55,22 +65,41 @@ To add motivations to the Motivational Wheel, you can use the following function
 Repository Structure
 ====================
 
-The Achievo repository is organized as follows:
+The Achievo repository is meticulously organized to provide a clear and intuitive layout. The repository consists of the following key directories:
 
-- ``readme``: Contains essential information about the Achievo web application.
-- ``presentation``: Houses files related to the project presentation and documentation.
-- ``source``: This directory forms the core of Achievo and contains the actual web application's source code.
-  - ``default page``: Represents the home page of the website, featuring the Pomodoro and Todo components.
-  - ``login page``: Holds the code for user authentication and login functionality.
-  - ``feedback form``: Contains the code for the feedback form to gather user opinions.
-  - ``nav+menu code``: Includes code for the navigation and menu system.
-  - ``webpages``: Comprises feature pages like Eisenhower Matrix, Hour Rule, and Motivational Wheel.
-    - ``icons``: Houses all the images and icons used in the web application.
-    - ``html``: Contains the HTML files for each feature page.
-    - ``css``: Holds the CSS files responsible for styling the web application.
-    - ``js``: Includes JavaScript files for implementing interactivity and functionality.
+1. **`presentation`:**
+   - This folder houses files related to the project presentation and documentation.
 
-This structure ensures a well-organized project, making it easier for developers to locate specific components and maintain the codebase effectively.
+2. **`documentation`:**
+   - The `documentation` folder contains comprehensive documentation to guide users and contributors through the Achievo project.
+
+3. **`source`:**
+   - The `source` directory is the heart of Achievo, encompassing the source code for the entire web application.
+
+   - **`landing page`:**
+     - This folder comprises HTML, CSS, and JavaScript files specifically designed for the landing page. It includes pages for sign-up, login, and password recovery.
+     - **`FrontEnd`** 
+        - This folder contains all the HTML CSS files that make the user interface of the landing page and the login sign up pages as well.
+    - **`BackEnd`** 
+        - This folder contains all the JavaScript and Node.JS files that make the backend of the landing page and the login sign up pages as well.
+
+
+   - **`home page`:**
+     - The `home page` directory contains HTML, CSS, and JavaScript files that contribute to the features and settings pages of Achievo. It encompasses both front-end and back-end files.
+     - **`FrontEnd`** 
+        - This folder contains all the HTML CSS files that make the user interface of the home page and the features of the application.
+    - **`BackEnd`** 
+        - This folder contains all the JavaScript and Node.JS files that make the backend of the home page and the features of Achievo.
+
+
+   - **`icons`:**
+     - The `icons` folder is dedicated to storing all images and icons utilized throughout the web application.
+
+4. **`readme`:**
+   - The `readme` file serves as a comprehensive guide, providing essential information about the Achievo web application.
+
+This structure ensures a logical and organized layout, facilitating easy navigation and maintenance of the Achievo project. Whether you're a developer or a contributor, this structure aims to enhance your understanding of the project's components.
+
 
 
 
