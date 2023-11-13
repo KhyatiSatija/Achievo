@@ -1,0 +1,664 @@
+*,
+        *:after,
+        *:before {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        text-decoration: none;
+        }
+        :root {
+        --yellow: #e6aced;
+        --green: #3b2469;
+        --red: #e6aced;
+        --blue: #8b0fe3;
+        --dark-blue:rgb(221, 190, 253);
+        --purple: #474d84;
+        --purple-secondary: #333867;
+        --title-primary-color: rgb(255, 255, 255);
+        --title-secondary-color:black;
+        --first-color: hsl(228, 81%, 49%);
+        --title-color: hsl(228, 12%, 15%);
+        --text-color: hsl(228, 8%, 50%);
+        --body-color: hsl(228, 100%, 99%);
+        --container-color: #fff;
+        }
+        body{
+          margin: 0px;
+          padding: 0px;
+        
+        }
+        .header{
+          background-color:rgb(211, 153, 248) ;
+          color: white;
+          padding-left: 4px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: fixed;
+          top: 0px;
+          right: 0px;
+          left: 0px;
+          z-index: 100; /* Set a higher z-index to ensure it stays above the content */
+        
+        }
+        .left{
+          height: 40px;
+          width: 20px;
+        }
+        .logoimage {
+          height: 55px;
+          width: 78px;
+          margin-top: -7px;
+      }
+        .sub-menu-wrap{
+          position:fixed;
+          right:55px;
+          top: 57px;
+          transition: max-height 0.5s;
+          width: 320px;
+          max-height: 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          overflow: hidden;
+          z-index: 200;
+        }
+        .sub-menu-wrap.open-menu{
+          max-height: 400px;
+          z-index: 200;
+
+        }
+        .sub-menu{
+          background: #fff;
+          padding: 20px;
+          z-index: 200;
+          
+        }
+        .user-info{
+          display: flex;
+          align-items: center;
+          z-index: 200;
+
+        }
+        .user-info h3{
+          font-weight: 500;
+          z-index: 200;
+
+        }
+        .user-info img{
+          width: 60px;
+          border-radius: 50%;
+          margin-right: 15px;
+          z-index: 200;
+
+        }
+        .sub-menu hr{
+          border: 0;
+          height: 1px;
+          width: 100%;
+          background: #ccc;
+          margin: 15px 0 10px;
+          z-index: 200;
+         
+        
+        }
+        .sub-menu-link{
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #525252;
+          margin: 12px 0;
+          z-index: 200;
+
+        }
+        .sub-menu-link p{
+          width: 100%;
+          z-index: 200;
+
+        
+        }
+        .sub-menu-link i{
+          width: 40px;
+          background: #e5e5e5;
+          border-radius: 50%;
+          padding: 8px;
+          margin-right: 15px;
+          z-index: 200;
+
+        }
+        .sub-menu-link span{
+          font-size: 22px;
+          transition: transform 0.5s;
+          z-index: 200;
+
+        }
+        .sub-menu-link:hover span{
+          transform: translateX(5px);
+          z-index: 200;
+
+        }
+        .sub-menu-link:hover p{
+          font-weight: 600;
+          z-index: 200;
+
+        }
+        .sideber{
+          background-color: black;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          top: 57px;
+          z-index: 200;
+
+        
+          
+        }
+        /*=============== GOOGLE FONTS ===============*/
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+        
+        /*=============== VARIABLES CSS ===============*/
+        :root {
+          /*========== Colors ==========*/
+          /*Color mode HSL(hue, saturation, lightness)*/
+          --first-color: hsl(228, 81%, 49%);
+          --title-color: hsl(228, 12%, 15%);
+          --text-color: hsl(228, 8%, 50%);
+          --body-color: hsl(228, 100%, 99%);
+          --container-color: #fff;
+        
+          /*========== Font and typography ==========*/
+          /*.5rem = 8px | 1rem = 16px ...*/
+          --body-font: 'Poppins', sans-serif;
+          --normal-font-size: .938rem;
+        }
+        
+        /* Responsive typography */
+        @media screen and (min-width: 968px) {
+          :root {
+            --normal-font-size: 1rem;
+          }
+        }
+        
+        /*=============== BASE ===============*/
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+        }
+        
+        
+        /*=============== NAV ===============*/
+        
+        .logoimage{
+          size: 400px;
+        }
+        @media screen and (max-width: 767px) {
+          .nav__logo, 
+          .nav__toggle, 
+          .nav__name {
+            display: none;
+          }
+        
+          .nav__list {
+            position: fixed;
+            bottom: 2rem;
+            background-color: var(--container-color);
+            box-shadow: 0 8px 24px hsla(228, 81%, 24%, .15);
+            width: 90%;
+            padding: 30px 40px;
+            border-radius: 1rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 36px;
+            transition: .4s;
+            z-index: 200;
+
+      
+          }
+        }
+        
+        .nav__link {
+          display: flex;
+          color: var(--text-color);
+          font-weight: 500;
+          transition: .3s;
+          z-index: 200;
+
+        }
+        
+        .nav__link i {
+          font-size: 1.25rem;
+          z-index: 200;
+
+        }
+        
+        .nav__link:hover {
+          color: var(--first-color);
+          z-index: 200;
+
+        }
+        
+        /* Active link */
+        .active-link {
+          color: var(--first-color);
+          z-index: 200;
+
+        }
+
+        
+        /*=============== BREAKPOINTS ===============*/
+        /* For small devices */
+        @media screen and (max-width: 200px) {
+          .nav__list {
+            column-gap: 20px;
+          }
+        }
+        
+        /* For medium devices */
+        @media screen and (min-width: 300px) {
+          .nav__list {
+            width: 332px;
+            z-index: 200;
+
+          }
+        }
+        
+        @media screen and (min-width: 767px) {
+          .container {
+            margin-left: 7rem;
+            margin-right: 1.5rem;
+            z-index: 200;
+
+          }
+          .nav {
+            position: fixed;
+            left: 0;
+            background-color: var(--container-color);
+            box-shadow: 1px 0 4px hsla(228, 81%, 49%, .15);
+            width: 84px;
+            height: 100vh;
+            padding: 2rem;
+            transition: .3s;
+            z-index: 200;
+
+          }
+            
+        /* Show menu */
+        .show-menu {
+          width: 255px;
+        }
+        
+        /* Rotate toggle icon */
+        .rotate-icon {
+          transform: rotate(180deg);
+        }
+        
+          .nav__logo {
+            display: flex;
+            z-index: 200;
+
+          }
+          .nav__logo i {
+            font-size: 1.25rem;
+            color: var(--first-color);
+            z-index: 200;
+
+          }
+          .nav__logo-name {
+            color: var(--title-color);
+            font-weight: 600;
+            z-index: 200;
+
+          }
+          .nav__logo, .nav__link {
+            align-items: center;
+            column-gap: 1rem;
+            z-index: 200;
+
+          }
+          .nav__list {
+            display: grid;
+            row-gap: 2.5rem;
+            margin-top: 10.5rem;
+            z-index: 200;
+
+          }
+          .nav__content {
+            overflow: hidden;
+            height: 100%;
+            z-index: 200;
+
+          }
+          .nav__toggle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--title-color);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.20rem;
+            display: grid;
+            place-items: center;
+            top: 2rem;
+            right: -10px;
+            cursor: pointer;
+            transition: .4s;
+            z-index: 200;
+
+          }
+        }
+      
+        /* For 2K & 4K resolutions */
+        @media screen and (min-width: 2048px) {
+          body {
+            zoom: 1.7;
+          }
+        }
+        
+        @media screen and (min-width: 3840px) {
+          body {
+            zoom: 2.5;
+          }
+        }
+        
+        .hamburger-menu {
+          height: 24px;
+          margin-left: 10px;
+          margin-right: 24PX;
+          margin-top: 4px;
+        }
+        .logo {
+          height: 33px;
+          margin-left: 20px;
+          margin-right: 20PX;
+          
+        }
+        .right {
+          width: 180px;
+          margin-right: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-shrink: 0;
+        }
+        .apps {
+          height: 20px;
+        }
+        .search {
+          height: 20px;
+          margin-right: 0px;
+          
+        }
+        .streaks_count {
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+          position: relative; /* Adding relative positioning for the tooltip */
+      }
+  
+     
+  
+      /* Style for the tooltip */
+      .tooltip {
+        position: absolute;
+        margin: 20px;
+        left: -10%;
+        transform: translateX(-50%);
+        background-color: #333; /* Dark gray background */
+        color: rgb(211, 203, 243);
+        padding: 10px 10px; /* Add more padding for a spacious feel */
+        font-size: 20px; /* Larger font size */
+        border-radius: 8px; /* Rounded corners */
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+      }
+      
+    /* Triangle for the tooltip arrow */
+    .tooltip::before {
+        content: "";
+        position: absolute;
+       
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px 5px 0;
+        border-style: solid;
+        border-color: #333 transparent transparent;
+    }
+      /* Show the tooltip on hover */
+      .streaks_count:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+      }
+      .streaks{
+        height: 20px;
+      }
+      
+        
+        .noti {
+          height: 20px;
+          
+        }
+        .userpp {
+          height: 32px;
+          border-radius: 16px;
+          cursor: pointer;
+        }
+        .middle {
+          display: block;
+          margin-left: 50px;
+          
+          
+        }
+        
+
+body{
+  align-items: center;
+}
+
+body .dark{
+    background-color: #272629;
+align-items: center;
+  }
+  
+  /* Styles for light mode (default) */
+  body .light{
+    background-color: rgb(185, 171, 249);
+    align-items: center;
+  }
+     
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: #333;
+  
+  }
+  
+  /* Toggle button styles */
+  .spacebt {
+    cursor: pointer;
+  }
+  
+.radio-btn {
+  width: 20px;
+  height: 6px;
+  padding: 9px;
+  padding-top: 6px;
+  padding-left: 6px;
+  background-color: #27173a;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.radio-btn .radio-inner {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #8154b8;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 100%;
+  height: 100%;
+  background-color: #27173a;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner.active {
+  transform: translateX(calc(150px - 137px));
+}
+
+.radio-btn .radio-inner.active::before {
+  left: -25px;
+  transform: scale(1);
+}
+
+/* ---------------------------------------------- */
+footer {
+  background-color: #6f42c1;
+  color: white;
+  text-align: center;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: small;
+}
+/* ----------------------------------------- */
+
+body, h1, h2, h3, p, ul, li, table, tr, th, td, form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333; 
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #dc53f7;
+  color: #fff; 
+  text-align: center;
+  padding: 1rem;
+  margin-top: 60px;
+  font-size: xx-large;
+}
+
+main {
+  margin: 2rem;
+}
+
+
+.calendar {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e186f4; 
+  color: #fff; 
+  padding: 0.5rem;
+  border-radius: 5px 5px 0 0;
+}
+
+#prev-month, #next-month {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#current-month {
+  font-size: 1.2rem;
+}
+
+
+.calendar-grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendar-grid th, .calendar-grid td {
+  width: 14.2857%; 
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.calendar-grid th {
+  background-color: #e186f4; 
+  color: #fff; 
+}
+
+
+.event-form {
+  background-color: #fff; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  text-align: center;
+  justify-content:center;
+  background-color: #a618c2; 
+  color: #fff;
+  border: purple;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #360340; 
+}

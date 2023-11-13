@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Wheel</title>
+    <link rel="stylesheet" href="spinning_wheel.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet">
+        <link rel="icon" type="image" href="../../Icons/achievo_no_bg_logo.png">
+
+    
+    <link rel="stylesheet" href="spinning_wheel.css">
+    
+       
+   
+</head>
+<body style="height: 800px;
+padding-left: 90px;">
+
+    <div class="header">
+        <div class="left">
+            <img class="logoimage" src="../../Icons/achievo_no_bg_logo.png" alt="achievo logo">
+        </div>
+        <div class="middle">
+            <img class="logo" src="../../Icons/achievo.png" alt="achievo text symbol">
+        </div>
+        <div class="right">
+            <div class="spacebt" onclick="toggleDarkMode()">
+                <div class="radio-btn">
+                    <div class="radio-inner"></div>
+                
+                </div>
+            </div>
+            
+            <img class="search" src="../../Icons/search.svg">
+            <img class="noti" src="../../Icons/notifications.svg">
+            
+            <div class="streaks_count">
+                <span>5</span>
+                <img class="streaks" src="../../Icons/streaks.png">
+                <div class="tooltip">Congratulations!🌟💖 With your 5 days of consecutive brilliance, you're on a radiant journey! ✨🍫</div>
+            </div>
+            
+            
+            <img src = "../../Icons/khyati_satija_dp.jpg" class = "userpp" onclick="toggleMenu()">
+        </div>
+        
+    
+    
+    </div>
+
+    <div class="sub-menu-wrap" id = "subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src="../../Icons/khyati_satija_dp.jpg" >
+                <h3>Khyati Satija</h3>
+            </div>
+            <hr/>
+            <a href = "../user_menu/user_profile.html" class = "sub-menu-link">
+                <i class='bx bx-user'></i>
+                <p>My Profile</p> <span>></span>
+            </a>
+            <a href="../user_menu/about_us.html" class="sub-menu-link">
+                <i class='bx bx-star'></i>
+                <p>About Us</p> <span>></span>
+            </a>
+
+            <a href="../user_menu/support.html" class="sub-menu-link">
+                <i class='bx bx-question-mark'></i>
+                <p>Support</p> <span>></span>
+            </a>
+
+            <a href="../../../LandingPage/FrontEnd/landing_page.html" class="sub-menu-link">
+                <i class='bx bx-log-out'></i>
+                <p>Log out</p> <span>></span>
+            </a>
+
+            
+
+        </div>
+    </div>
+
+    <!-- side bar navigation menu -->
+    <div class="nav" id="nav">
+        <nav class="nav__content">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-chevron-right' ></i>
+            </div>
+
+            <a href="../home_page.html" class="nav__logo">
+                <i class='bx bx-menu' ></i>
+                <span class="nav__logo-name">Features</span>
+            </a>
+
+            <div class="nav__list">
+               
+                <a href="../home_page.html" class="nav__link">
+                    <i class='bx bx-alarm' ></i>
+                        <span class="nav__name">Pomodoro-ToDo</span>
+                </a>
+                
+                <a href="eisenhower_matrix.html" class="nav__link ">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="nav__name">Eisenhower Matrix</span>
+                </a>
+
+                <a href="spinning_wheel.html" class="nav__link active-link">
+                    <i class='bx bx-webcam'></i>
+                    <span class="nav__name">Motivational wheel</span>
+                </a>
+
+                <a href="hour_rule.html" class="nav__link">
+                    <i class='bx bx-file' ></i>
+                    <span class="nav__name">Analyse your day</span>
+                </a>
+
+                
+                <a href="milestone_setter.html" class="nav__link">
+                    <i class='bx bx-flag'></i>
+                    <span class="nav__name">Milestone Setter</span>
+                </a>
+                <a href="leaderboard.html" class="nav__link">
+                    <i class='bx bx-bar-chart-square' ></i>
+                    <span class="nav__name">Leaderboard</span>
+                </a>
+
+            </div>
+        </nav>
+    </div>
+
+
+    </div>
+    <div style="
+    height: 200px;
+    width: 200px;
+    position: static;
+    margin-top: 60px;
+    margin-left: 60px;
+    "> <div>
+       <div class="wheel">
+        <span class="wheel-container">
+            <div id="mainbox" class="mainbox">
+              <div id="box" class="box">
+                <div class="box1">
+                  <span class="span1"><b>Gaming</b></span>
+                  <span class="span2"><b>Homework</b></span>
+                  <span class="span3"><b>Sport</b></span>
+                  <span class="span4"><b>Sleep</b></span>
+                </div>
+                <div class="box2">
+                  <span class="span1"><b>Eat</b></span>
+                  <span class="span2"><b>Rest</b></span>
+                  <span class="span3"><b>Talk</b></span>
+                  <span class="span4"><b>Work</b></span>
+                </div>
+              </div>
+                <button class="spin" onclick="myfunction()">SPIN</button>
+            </div>
+        </span> 
+        <div>
+            <div id="Scrollimage">
+                <span id="quote" class="quote"> TAP "SPIN" to get some fun suggestion! <span>
+              </div>
+        </div>   
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="spinning_wheel.js"></script>
+
+ 
+    </body>
+</html>

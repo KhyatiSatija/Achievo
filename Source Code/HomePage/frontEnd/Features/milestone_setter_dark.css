@@ -1,0 +1,31 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+main {
+    background-color: #111111;
+}
+
+.calendar {
+    border: 2px solid #444;
+}
+
+.calendar-header {
+    background-color: #1a1a1a;
+}
+
+.calendar-grid {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.event-form {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}

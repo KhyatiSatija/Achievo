@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eisenhower Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet">
+        <link rel="icon" type="image" href="../../Icons/achievo_no_bg_logo.png">
+
+    
+    <link rel="stylesheet" href="eisenhower_matrix.css">
+    
+       
+   
+</head>
+<body style="height: 800px;
+padding-left: 90px;">
+
+    <div class="header">
+        <div class="left">
+            <img class="logoimage" src="../../Icons/achievo_no_bg_logo.png" alt="achievo logo">
+        </div>
+        <div class="middle">
+            <img class="logo" src="../../Icons/achievo.png" alt="achievo text symbol">
+        </div>
+        <div class="right">
+            <div class="spacebt" onclick="toggleDarkMode()">
+                <div class="radio-btn">
+                    <div class="radio-inner"></div>
+                
+                </div>
+            </div>
+            
+            <img class="search" src="../../Icons/search.svg">
+            <img class="noti" src="../../Icons/notifications.svg">
+            
+            <div class="streaks_count">
+                <span>5</span>
+                <img class="streaks" src="../../Icons/streaks.png">
+                <div class="tooltip">Congratulations!🌟💖 With your 5 days of consecutive brilliance, you're on a radiant journey! ✨🍫</div>
+            </div>
+            
+            
+            <img src = "../../Icons/khyati_satija_dp.jpg" class = "userpp" onclick="toggleMenu()">
+        </div>
+        
+    
+    
+    </div>
+
+    <div class="sub-menu-wrap" id = "subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src="../../Icons/khyati_satija_dp.jpg" >
+                <h3>Khyati Satija</h3>
+            </div>
+            <hr/>
+            <a href = "../user_menu/user_profile.html" class = "sub-menu-link">
+                <i class='bx bx-user'></i>
+                <p>My Profile</p> <span>></span>
+            </a>
+            <a href="../user_menu/about_us.html" class="sub-menu-link">
+                <i class='bx bx-star'></i>
+                <p>About Us</p> <span>></span>
+            </a>
+
+            <a href="../user_menu/support.html" class="sub-menu-link">
+                <i class='bx bx-question-mark'></i>
+                <p>Support</p> <span>></span>
+            </a>
+
+            <a href="../../../LandingPage/FrontEnd/landing_page.html" class="sub-menu-link">
+                <i class='bx bx-log-out'></i>
+                <p>Log out</p> <span>></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- side bar navigation menu -->
+    <div class="nav" id="nav">
+        <nav class="nav__content">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-chevron-right' ></i>
+            </div>
+
+            <a href="../home_page.html" class="nav__logo">
+                <i class='bx bx-menu' ></i>
+                <span class="nav__logo-name">Features</span>
+            </a>
+
+            <div class="nav__list">
+               
+                <a href="../home_page.html" class="nav__link">
+                    <i class='bx bx-alarm' ></i>
+                        <span class="nav__name">Pomodoro-ToDo</span>
+                </a>
+                
+                <a href="eisenhower_matrix.html" class="nav__link active-link">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="nav__name">Eisenhower Matrix</span>
+                </a>
+
+                <a href="spinning_wheel.html" class="nav__link">
+                    <i class='bx bx-webcam'></i>
+                    <span class="nav__name">Motivational wheel</span>
+                </a>
+
+                <a href="hour_rule.html" class="nav__link">
+                    <i class='bx bx-file' ></i>
+                    <span class="nav__name">Analyse your day</span>
+                </a>
+
+                
+                <a href="milestone_setter.html" class="nav__link">
+                    <i class='bx bx-flag'></i>
+                    <span class="nav__name">Milestone Setter</span>
+                </a>
+                <a href="priority_setter.html" class="nav__link">
+                    <i class='bx bx-bar-chart-square' ></i>
+                    <span class="nav__name">1-3-5 Rule</span>
+                </a>
+
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- ------------------------->
+    <div style="
+    height: 200px;
+    width: 200px;
+    position: static;
+    margin-top: 60px;
+    ">
+    </div>
+    <div class="matrix-container">
+        <div class="quadrant" id="important-urgent">
+            <!-- <button id="refreshButton">Refresh</button> -->
+
+            <h3>Important & Urgent</h3>
+            <button class="refresh-button" onclick="confirmReset('important-urgent')">↻</button>
+
+            <div class="add-task-btn" onclick="addTask('important-urgent')">
+                <!-- <img src="plus button.jpeg" alt="Add Task"> -->
+            </div>
+            <div class="tasks" id="tasks-1"></div>
+            
+        </div>
+
+        <div class="quadrant" id="important-not-urgent">
+            <!-- <button id="refreshButton">Refresh</button> -->
+            <h3>Important & Not Urgent</h3>
+            <button class="refresh-button" onclick="confirmReset('important-not-urgent')">↻</button>
+
+            <div class="add-task-btn" onclick="addTask('important-not-urgent')">
+                <!-- <img src="plus button.jpeg" alt="Add Task"> -->
+            </div>
+            <div class="tasks" id="tasks-2"></div>
+        </div>
+
+        <div class="quadrant" id="not-important-urgent">
+            <!-- <button id="refreshButton">Refresh</button> -->
+            <h3>Not Important & Urgent</h3>
+            <button class="refresh-button" onclick="confirmReset('not-important-urgent')">↻</button>
+
+            <div class="add-task-btn" onclick="addTask('not-important-urgent')">
+                <!-- <img src="plus button.jpeg" alt="Add Task"> -->
+            </div>
+            <div class="tasks" id="tasks-3"></div>
+        </div>
+
+        <div class="quadrant" id="not-important-not-urgent">
+            <!-- <button id="refreshButton">Refresh</button> -->
+            <h3>Not Important & Not Urgent</h3>
+            <button class="refresh-button" onclick="confirmReset('quadrant4')">↻</button>
+
+            <div class="add-task-btn" onclick="addTask('not-important-not-urgent')">
+                <!-- <img src="plus button.jpeg" alt="Add Task"> -->
+            </div>
+            <div class="tasks" id="tasks-4"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+    <script src="eisenhower_matrix.js"></script>
+ 
+</body>
+</html>
