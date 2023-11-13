@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+    <link rel="stylesheet" href="feedback_form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image" href="../Icons/achievo_no_bg_logo.png">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="one">
+        <div class="container">
+            <form>
+                <h3>Please drop your feedback here.</h3>
+                <p>We would like to improve our website based on your feedback.</p>
+                <label for="Name"><strong>Username</strong></label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="Email"><strong>Email Id</strong></label><br>
+                <input type="email" id="email" name="email"><br>
+                <h4 id="question">Which feature helped you the most to fight distraction?</h4>
+                <ul>
+                    <li>
+                        <input type="radio" name="option" id="a" class="option">
+                        <label for="a" id="a_text">Pomodoro</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="option" id="b" class="option">
+                        <label for="b" id="b_text">Eisenhower matrix</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="option" id="c" class="option">
+                        <label for="c" id="c_text">Hour Rule</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="option" id="d" class="option">
+                        <label for="d" id="d_text">Spinning Wheel</label>
+                    </li>
+                </ul><br>
+                <h5>What did you like the most about our website?</h5>
+                <textarea name="review" id="review1" cols="30" rows="5"></textarea><br>
+                <h5>How can we improve our website?</h5>
+                <textarea name="review2" id="review2" cols="30" rows="5"></textarea><br>
+                <h5>Do you have any queries regarding our website?</h5>
+                <textarea name="review3" id="review2" cols="30" rows="5"></textarea><br>
+            </form>
+            <br><br>
+
+
+        </div>
+        <div class="container">
+            <div class="rating_box">
+                <h4>How was your experience?</h4>
+                <div class="star-rating">
+                    <input type="radio" name="rating" id="star5" value="5"><label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4"><label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3"><label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2"><label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1"><label for="star1"></label>
+                </div>
+
+            </div>
+        </div>
+        <button type="submit" form="form1" value="Submit" class="button">Submit</button>
+    </div>
+
+
+</body>
+
+</html>

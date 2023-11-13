@@ -1,0 +1,256 @@
+body{
+    background-color:#200232;
+    color:white;
+    margin: 0;
+    padding: 0;;
+}
+
+#scroll{
+    width:auto;
+    padding:50px;
+    border:10px;
+    margin:50px;
+}
+a:link, a:visited{
+    color:white;
+    text-align:center;
+    padding:7.5px 13.5px;
+    display:inline-block;
+    text-decoration:none;
+}
+a:hover, a:active{
+    background-color:rgb(123, 0, 255);
+    border-radius:100px;
+}
+.caption{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px white, 0px 0px 2px black;
+}
+.lineup{
+    text-align: left;
+}
+.linedown{
+    text-align: right;
+} 
+/* .bullet{
+    display:block !important;
+} */
+ul{
+    list-style-type:none;
+    overflow:hidden;
+}
+li{
+    display:inline;
+    float:left;
+}
+
+
+.scroll1-cover{
+    background-image: url("../Icons/cover.jpeg") ;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    background-size :100%;
+    background-origin:border-box;
+    margin:0;
+    padding:0;
+    position: relative;
+} 
+.s1-cover-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the image remains behind other content */
+}
+  
+.s1-content{
+    width:auto;
+    padding:50px;
+    border:10px;
+    margin:0px;
+    text-align:center;
+}
+.s1-title{
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 20%;
+
+    text-align: center;
+    padding: 0px 0;  
+    /* padding: 50px 0; */
+
+    /* position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%; */
+} 
+.s1-tagline{
+    font-size: 35px;
+    font-family:"Sofia", sans-serif;
+    font-style:oblique;
+    line-height: 20%;
+}
+.get-started{
+    margin:20px;
+    padding:25px;
+}
+.signup{
+    margin:10px;
+    padding:10px;
+}
+a#start:link, a#start:visited, a#login:link, a#login:visited{
+    background-color: #6e10a8;
+    border-radius:200px;
+    padding:10px 18px;
+    text-align:center;
+    display:inline-block;
+    font-size: 25px;
+}
+a#start:hover, a#start:active{
+    background-color: rgb(123, 0, 255);
+}
+a#login:hover, a#login :active{
+    background-color: rgb(123, 0, 255);
+    
+}
+.s1-login{
+    font-size: 25px;
+    line-height: 100%;
+    margin:10px;
+    padding:10px;
+}
+#s1-down-arrow{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3%;
+    padding:20px;
+}
+
+.s2-bullets {
+    display: flex;
+    flex-direction: column; /* Stack the bullets vertically */
+    align-items: center; /* Center the bullet images horizontally */
+  }
+  
+.s2-bullet-list {
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack the list items vertically */
+    align-items: center; /* Center the list items horizontally */
+    margin: 0;
+    padding: 0;
+  }
+  
+.s2-bullet {
+    display: block; /* Display the list items as block elements */
+    margin: 10px; /* Adjust the margin as needed */
+  }
+
+.s2-bullet img,
+.feature-image img {
+    object-fit: contain; /* or object-fit: cover; */
+    width: 100%;
+    height: 100%;
+}
+
+#bullet1{
+    position:relative;
+    /* left:5%; */
+}
+#bullet2{
+    position:relative;
+    /* left:-40%; */
+     /* position:absolute; */
+}
+#bullet3{
+    position:relative;
+    /* left:40%; */
+    /* position:absolute;
+    left:700px;
+    top: 1100px; */
+}
+
+.feature-image {
+    position: absolute; /* Use absolute positioning for the feature images */
+    width: 50px; /* Adjust the width of the feature images as needed */
+    top: 50%; /* Position the feature images vertically at the center */
+    transform: translateY(-50%); /* Center the feature images vertically */
+}
+
+#feature1{
+    right: 0; /* Place feature image 1 on the right side */
+}
+
+#feature2{
+    left: 0; /* Place feature image 2 on the left side */
+}
+
+#feature3{
+    right: 0; /* Place feature image 3 on the right side */
+}
+
+.s3-rectangles {
+    overflow: hidden; /* Hide the overflowing portion of the container */
+}
+
+.s3-rect-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    width: fit-content; /* Make the container fit the content (all images) */
+    animation: scrollRectangles 100s linear infinite; /* Animation properties */
+}
+
+@keyframes scrollRectangles {
+    0% {
+        transform: translateX(0); /* Back to the initial position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move the images to the left (one full cycle) */
+    }
+}
+
+.s3-rect-container img {
+    margin: 10px; /* Add spacing between the images */
+}
+
+
+.scroll4 {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center the items vertically */
+    padding: 10px;
+}
+
+.s4-conclude {
+    flex: 1; /* Allow this element to take up remaining space */
+}
+
+#s4-image {
+    width: 500px; /* Adjust the width as needed */
+    margin-left: 10px; /* Add spacing between the image and the content */
+}
+
+
+.f-container{
+    font-size: 20px;
+}
+.f-sites{
+    float:right;
+    margin:5px;
+    padding:5px;
+}
+.f-icons{
+    display: inline-block;
+    margin-left: 10px;/* Center the icons vertically */
+}
+.f-icons img {
+    width: 20px; /* Adjust the width to make the icons smaller */
+}
+
+
+
+

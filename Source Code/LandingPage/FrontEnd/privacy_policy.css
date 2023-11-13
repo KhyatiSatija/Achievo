@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #4a148c; /* Darker purple color */
+    text-align: center;
+    padding: 20px;
+    color: #f5e1f6;
+}
+.content {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f5e1f6; /* Light purple background color */
+    color: #4a148c; /* Dark purple text color */
+}
+
+.content b {
+    color: #6200ea; /* Purple color for bold text */
+}
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content li {
+    margin-bottom: 15px;
+}
+
+.content a {
+    color: #6200ea; /* Purple color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: aliceblue;
+    background-color: #4a148c; /* Darker purple color */
+    text-align: center;
+    padding: 10px;
+}
