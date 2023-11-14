@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievo | Settings</title>
+    <link rel="stylesheet" href="settings.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet">
+    
+    <script src="settings.js"></script>
+    
+</head>
+
+<body>
+    <div class="header">
+        <div class="left">
+            <img class="logoimage" src="/Default_page/icons/logo.png">
+        </div>
+        <div class="middle">
+            <img class="logo" 
+            src="/Default_page/achievo.png">
+        </div>
+        <div class="right">
+            <div class="spacebt">
+                <div class="radio-btn">
+                    <div class="radio-inner"></div>
+                  
+                </div>
+            </div>
+            
+            <img class="search" src="/Default_page/icons/search.svg">
+            <img class="noti" src="/Default_page/icons/notifications.svg">
+            
+            <div class="streaks_count">
+                <span>5</span>
+                <img class="streaks" src="/Default_page/icons/streaks.png">
+            
+            </div>
+            <img src = "/Default_page/icons/userpp.jpeg" class = "userpp" onclick="toggleMenu()">
+        </div>
+        <div class="sub-menu-wrap" id = "subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="/Default_page/icons/userpp.jpeg" >
+                    <h3>Khyati Satija</h3>
+                </div>
+                <hr/>
+                <a href = "/Profile-Settings/settings.html" class = "sub-menu-link">
+                    <i class='bx bx-user'></i>
+                    <p>My Profile</p> <span>></span>
+                </a>
+                <a href="/About_us/about_us.html" class="sub-menu-link">
+                    <i class='bx bx-star'></i>
+                    <p>About Us</p> <span>></span>
+                </a>
+
+                <a href="/feedback_form/index.html" class="sub-menu-link">
+                    <i class='bx bx-question-mark'></i>
+                    <p>Support</p> <span>></span>
+                </a>
+
+                <a href="/Landing_page/index.html" class="sub-menu-link">
+                    <i class='bx bx-log-out'></i>
+                    <p>Log out</p> <span>></span>
+                </a>
+            </div>
+        </div>
+    
+    
+    </div>
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4" style="text-align:center">
+            User Profile
+        </h4>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general" onclick="setActiveTab('account-general')">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password" onclick="setActiveTab('account-change-password')">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info" onclick="setActiveTab('account-info')">Personal Info</a>
+                        
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-notifications" onclick="setActiveTab('account-notifications')">Notifications</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <div class="card-body media align-items-center">
+                                <img src="/Default_page/icons/userpp.jpeg" alt
+                                    class="d-block ui-w-80" id="profileImage">
+                                <div class="media-body ml-4">
+                                    <label class="btn btn-outline-primary">
+                                        Upload new photo
+                                        <input type="file" class="account-settings-fileinput" id="uploadInput">
+                                    </label> &nbsp;
+                                    <button type="button" class="btn btn-default md-btn-flat" onclick="resetProfileImage()">Reset</button>
+                                    <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control mb-1" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="text" class="form-control mb-1" name="email">
+                                    <div class="alert alert-warning mt-3">
+                                        Your email is not confirmed. Please check your inbox.<br>
+                                        <a href="javascript:void(0)">Resend confirmation</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Institute</label>
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Current password</label>
+                                    <input type="password" class="form-control" id="currentPassword">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">New password</label>
+                                    <input type="password" class="form-control" id="newPassword">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repeat new password</label>
+                                    <input type="password" class="form-control" id="repeatNewPassword">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">About yourself.</label>
+                                    <textarea class="form-control"
+                                        rows="5">We would love to hear :)</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="text" class="form-control" value="DD/MM/YYYY" name="dateOfBirth">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Country</label>
+                                    <select class="custom-select">
+                                        <option selected>India</option>
+                                        <option>Canada</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                        <option>UK</option>
+                                        <option>USA</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Contacts</h6>
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" value="0000000000" name="phoneNumber">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="account-notifications">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Activity</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Daily Reminder</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Pomodoro timer</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input">
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Task reminder</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Website</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Email subscription</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input">
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Desktop notifications</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Weekly progress</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary" id="saveChangesBtns">Save changes</button>&nbsp;
+            <button type="button" class="btn btn-default">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Cloudflare Email Decode  -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script> 
+    <script type="text/javascript">
+
+        document.addEventListener('DOMContentLoaded', function () {
+                var activeTab = 'account-general'; // Default active tab
+
+                function setActiveTab(tabId) {
+                    activeTab = tabId;
+                }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var radioBtn = document.querySelector(".radio-btn");
+            var radioInner = document.querySelector(".radio-inner");
+            var body = document.body;
+
+            radioBtn.addEventListener("click", function () {
+                radioInner.classList.toggle("active");
+                body.classList.toggle("dark");
+            });
+
+            var linkColor = document.querySelectorAll('.nav__link');
+
+            function colorLink() {
+                linkColor.forEach(function (l) {
+                    return l.classList.remove('active-link');
+                });
+                this.classList.add('active-link');
+            }
+
+            linkColor.forEach(function (l) {
+                return l.addEventListener('click', colorLink);
+            });
+
+        });
+    
+        // TO UPLOAD IMAGE
+        const uploadInput = document.getElementById('uploadInput');
+        const profileImage = document.getElementById('profileImage');
+
+        uploadInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    profileImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function resetProfileImage() {
+            // Reset the profile image to the default one
+            document.getElementById('profileImage').src = "/icons/userpp.jpeg";
+            // Clear the file input value
+            document.getElementById('uploadInput').value = '';
+        }
+
+        // FORM VALIDATION
+        function isValidName(name) {
+            return name.trim() !== '';
+        }
+
+        function isValidUsername(username) {
+            const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+            return usernameRegex.test(username);
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhoneNumber(phoneNumber) {
+            const phoneRegex = /^\d+(-\d+)*$/;
+            return phoneRegex.test(phoneNumber);
+        }
+
+        function isValidDateOfBirth(dateOfBirth) {
+            const dateRegex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$/;
+            return dateRegex.test(dateOfBirth);
+        }
+
+        function validateForm() {
+            const name = $("input[name='name']").val();
+            const username = $("input[name='username']").val();
+            const email = $("input[name='email']").val();
+            const phoneNumber = $("input[name='phoneNumber']").val();
+            const dateOfBirth = $("input[name='dateOfBirth']").val();
+
+            if (!isValidName(name)) {
+                alert(`Name is mandatory! Please enter your name in the ${activeTab} tab.`);
+                return false;
+            }
+
+            if (!isValidUsername(username)) {
+                alert(`Invalid username! Username should contain only letters, numbers, underscores, and be between 3 and 20 characters in the ${activeTab} tab.`);
+                return false;
+            }
+
+            if (!isValidEmail(email)) {
+                alert(`Invalid email address! Please enter a valid email in the ${activeTab} tab.`);
+                return false;
+            }
+
+            if (!isValidPhoneNumber(phoneNumber)) {
+                alert(`Invalid phone number! Please enter a valid phone number containing only digits and optional hyphens in the ${activeTab} tab.`);
+                return false;
+            }
+
+            if (!isValidDateOfBirth(dateOfBirth)) {
+                alert(`Invalid date of birth! Please enter a valid date in the format MM/DD/YYYY in the ${activeTab} tab.`);
+                return false;
+            }
+
+            return true;
+        }
+
+        $(document).ready(function () {
+            $("#saveChangesBtns").click(function () {
+                if (validateForm()) {
+                    alert(`Changes saved successfully in the ${activeTab} tab!`);
+                }
+            });
+        });
+
+        // PASSWORD VALIDATION
+        function validatePassword(password) {
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return passwordRegex.test(password);
+        }
+
+        document.getElementById('saveChangesBtns').addEventListener('click', function () {
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const repeatNewPassword = document.getElementById('repeatNewPassword').value;
+
+            if (newPassword !== repeatNewPassword) {
+                alert(`New passwords do not match. Please re-enter in the ${activeTab} tab.`);
+                return;
+            }
+
+            if (!validatePassword(newPassword)) {
+                alert(`Invalid password format. Please follow the specified format in the ${activeTab} tab.`);
+                return;
+            }
+
+            alert(`Password changed successfully in the ${activeTab} tab!`);
+            // You can send the currentPassword and newPassword to the server for verification and updating
+        });
+    });
+</script>
+
+</body>
+</html>
