@@ -1,3 +1,4 @@
+/* CSS reset, ensuring a consistent baseline for styling across different browsers. */
 *,
 *:after,
 *:before {
@@ -8,6 +9,7 @@ font-size: 100%;
 vertical-align: baseline;
 text-decoration: none;
 }
+
 :root {
 --yellow: #e6aced;
 --green: #3b2469;
@@ -61,7 +63,7 @@ body{
   top: 57px;
   transition: max-height 0.5s;
   width: 320px;
-  max-height: 0px;
+  max-height: 0px; /*hides the content */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   overflow: hidden;
   z-index: 100;
@@ -85,6 +87,7 @@ body{
   width: 60px;
   border-radius: 50%;
   margin-right: 15px;
+  object-fit: cover;
 }
 .sub-menu hr{
   border: 0;
