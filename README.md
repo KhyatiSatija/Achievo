@@ -34,7 +34,7 @@ Achievo incorporates the popular Pomodoro Technique to help you manage your time
 ### Eisenhower Matrix
 The Eisenhower Matrix, also known as Urgent-Important Matrix, is a time management tool that helps users prioritize tasks based on their urgency and importance. It categorizes tasks into four quadrants:
 
-- **Urgent and Important:** Tasks that need immediate attention. These are top priorities.
+- **Urgent and Important:** Tasks that need immediate attention. These are the top priorities.
 - **Important, but Not Urgent:** Tasks that are significant but can be scheduled for later.
 - **Urgent, but Not Important:** Tasks that are pressing but don't contribute significantly to long-term goals.
 - **Not Urgent and Not Important:** Low-priority tasks that can be eliminated or delegated.
